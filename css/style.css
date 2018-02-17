@@ -1,30 +1,56 @@
 body{
-	background: green;
+	background:#006666;
+  overflow:hidden;
+  font-family: sans-serif;
 }
 .login-container{
 	text-align: center;
     margin: 200px auto;
+/*    margin: 120px 350px;*/
    }
  .reg-btn{
 	padding: 10px 50px 10px;
     margin: 10px;
-    background-color: #3db93d
+    background-color: #33CC99;
     color: white;
     border-radius: 50px;
+    border: none;
  }
  .reg-btn:hover{
- 	background-color: white;
- 	border : 2px solid #3db93d;
- 	color: #3db93d;
+ 	background-color: #33CC99;
+ 	color:white;
+  box-shadow:  2px 5px 8px 2px #0000001c;
+ }
+ input{
+    padding: 10px 0;
+    border: 1px solid #7777774f;
+    width: 90%;
  }
  label{
  	padding:10px;
  }
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color:blue;
+  color:#777;
   padding: 5px;
+  text-align: center;
 }
 ::-moz-placeholder { /* Firefox 19+ */
   color:blue;
   padding: 5px;
+  text-align: center;
+}
+.inner-container {
+    background:#f1ecec;
+    padding: 40px;
+    box-shadow: 4px 3px 5px 5px #00000029;
+    margin: 0 40px;
+}
+@media only screen and (max-width:768px){
+  .login-container{
+    margin: 86px auto;
+}
+}
+.login-heading{
+ font-size: 36px;
+    padding: 10px 0
 }
