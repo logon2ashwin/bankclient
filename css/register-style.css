@@ -1,6 +1,5 @@
 body{
 	background:#009966d4;
-  overflow:hidden;
   font-family: sans-serif;
 }
 .login-container{
@@ -41,16 +40,13 @@ body{
 }
 .inner-container {
     background:#f1ecec;
-    padding: 40px;
+    padding: 10px 20px;
     box-shadow: 4px 3px 5px 5px #00000029;
     margin: 0 40px;
 }
 @media only screen and (max-width:768px){
   .login-container{
-    margin: 25px auto;
-}
-  .change{
-    margin: 150px auto;
+    margin: 0px auto;
 }
 }
 .login-heading{
@@ -58,4 +54,7 @@ body{
     padding: 10px 0;
     color: white;
     text-shadow: -3px -1px 2px #00000029;
+}
+label {
+    padding: 5px;
 }
