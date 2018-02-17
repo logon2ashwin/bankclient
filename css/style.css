@@ -1,0 +1,30 @@
+body{
+	background: green;
+}
+.login-container{
+	text-align: center;
+    margin: 200px auto;
+   }
+ .reg-btn{
+	padding: 10px 50px 10px;
+    margin: 10px;
+    background-color: #3db93d
+    color: white;
+    border-radius: 50px;
+ }
+ .reg-btn:hover{
+ 	background-color: white;
+ 	border : 2px solid #3db93d;
+ 	color: #3db93d;
+ }
+ label{
+ 	padding:10px;
+ }
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color:blue;
+  padding: 5px;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color:blue;
+  padding: 5px;
+}
