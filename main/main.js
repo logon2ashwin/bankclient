@@ -1,21 +1,24 @@
-angular.module('bankapp')
-    .config(['$routeProvider', '$httpProvider', '$locationProvider', function (routeProvider, $httpProvider, $locationProvider) {
+bankapp.config(['$routeProvider', '$httpProvider', '$locationProvider', function ($routeProvider, $httpProvider, $locationProvider) {
         
-        routeProvider
+    $routeProvider
 
-        .when('', {
-            redirectTo: '/home'
-        })
-        .when('/', {
-            redirectTo: '/home'
-        })
-        .when('/home', {
-            templateUrl: 'modules/home/index.html',
-            controller: 'Homepagectrl'
-        })
-        .when('/signin', {
-            templateUrl: 'modules/institutesignin/index.html',
-            controller: 'instituteSigninCtrl'
-        })
-    }])
-    .controller('MainCtrl', ['$scope'])
+    .when('', {
+        redirectTo: '/login'
+    })
+    .when('/', {
+        redirectTo: '/login'
+    })
+    .when('/login', {
+        templateUrl: 'modules/login/index.html',
+        controller: 'loginctrl'
+    })
+    .when('/register', {
+        templateUrl: 'modules/register/index.html',
+        // controller: ''
+    })
+    $locationProvider.html5Mode({
+        enabled:true,
+        requireBase: false
+    });
+}])
+bankapp.controller('MainCtrl', ['$scope'])

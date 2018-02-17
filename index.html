@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="bankapp">
 <head>
 	<title>DSMT</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,31 +8,18 @@
 	<script type="text/javascript" src="./js/angular.min.js"></script>
 	<script type="text/javascript" src="./js/angular-route.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+	<!-- controllers -->
+	<script src='./main/app.js'></script>
+	<script src='./main/main.js'></script>
+
+	<!-- modules -->
+	<script src='./modules/login/js/loginctrl.js'></script>
 </head>
 <body>
-	<div class="login-container">
-	<div class="container">
-		<div class="login-heading">DSMT</div>
-		<div class="inner-container">
-			<label>Username</label><br>
-			<input type="text" name="" placeholder="Enter username" autofocus><br>
-			<label>Password</label><br>
-			<input type="password" name="" placeholder="Enter password"><br>
-			<div>or</div>
-			<div><a href="#">Login With Touch ID</a></div>
-			<button class="reg-btn">Login</button><br>
-			<div><a href="#">Not Registered</a></div>
-			<button class="reg-btn">Register</button><br>
-		</div>
-</div>
-</div>
+
+ <div ng-view></div>
+
 </body>
 <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-    $("button").click(function(){
-        alert("Welcome to DSMT");
-    });
-});
-</script>
 </html>
