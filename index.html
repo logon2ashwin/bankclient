@@ -1,26 +1,28 @@
 <!DOCTYPE html>
-<html ng-app="bankapp">
+<html>
 <head>
 	<title>DSMT</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
-	<script type="text/javascript" src="./js/angular.min.js"></script>
+	<script type="text/javascript" src="./js/angular.js"></script>
 	<script type="text/javascript" src="./js/angular-route.min.js"></script>
+	
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-	<!-- controllers -->
+	
+</head>
+<body  ng-app="bankapp">
+
+<div class="ng-view"></div>
+
+<!-- controllers -->
 	<script src='./main/app.js'></script>
 	<script src='./main/main.js'></script>
-
-	<!-- modules -->
+<!-- modules -->
 	<script src='./modules/login/js/login.js'></script>
 	<script src='./modules/register/js/register.js'></script>
-</head>
-<body>
-
- <div ng-view></div>
+	<script src='./modules/dashboard/js/dashboard.js'></script>
 
 </body>
-<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
 </html>
