@@ -8,6 +8,10 @@ angular.module('dashboard',[])
                 url: url,
                 headers: $rootScope.headers
             }).then(function(response){
+
+                if(response.data.status == 'success'){
+                    $scope.accountdetails = response.data.data;
+                }
                 
             });
         }
