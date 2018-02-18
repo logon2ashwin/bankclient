@@ -14,7 +14,7 @@ bankapp.config(['$routeProvider', '$httpProvider', '$locationProvider', function
     })
     .when('/register', {
         templateUrl: 'modules/register/index.html',
-        // controller: ''
+        controller: 'registerctrl'
     })
     $locationProvider.html5Mode({
         enabled:true,

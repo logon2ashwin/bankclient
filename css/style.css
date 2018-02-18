@@ -4,7 +4,8 @@ body{
   font-family: sans-serif;
 }
 .login-container{
-	text-align: center;
+  text-align: center;
+  /* overflow: scroll; */
 
    }
  .reg-btn{

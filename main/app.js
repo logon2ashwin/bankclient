@@ -1,7 +1,8 @@
 var dependencies = [
     // controllers here
     'ngRoute',
-    'login'
+    'login',
+    'register'
 ]
 
 
@@ -9,6 +10,11 @@ var bankapp = angular.module('bankapp', dependencies)
 
 
 bankapp.run(["$rootScope", "$location",function($rootScope, $location,){
+
+    $rootScope.headers = {
+        'Content-Type' : 'application/json'
+    }
+    $rootScope.serverpath = 'http://localhost:3002/';
 
     $rootScope.go = function (path) {
         $location.path(path);
