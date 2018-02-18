@@ -5,17 +5,17 @@
 			<div class="inner-container">
 				<label>Username</label>
 				<br>
-				<input type="text" name="" placeholder="Enter username" autofocus>
+				<input ng-model='user.username' type="text" name="" placeholder="Enter username" autofocus>
 				<br>
 				<label>Password</label>
 				<br>
-				<input type="password" name="" placeholder="Enter password">
+				<input ng-model='user.password' type="password" name="" placeholder="Enter password">
 				<br>
 				<div>or</div>
 				<div>
 					<a href="#">Login With Touch ID</a>
 				</div>
-				<button class="reg-btn">Login</button>
+				<button class="reg-btn" ng-click="login(user)">Login</button>
 				<br>
 				<div>
 					<span>or</span>

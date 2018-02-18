@@ -12,6 +12,10 @@ bankapp.config(['$routeProvider', '$httpProvider', '$locationProvider', function
         templateUrl: 'modules/login/index.html',
         controller: 'loginctrl'
     })
+    .when('/dashboard', {
+        templateUrl: 'modules/dashboard/index.html',
+        // controller: 'registerctrl'
+    })
     .when('/register', {
         templateUrl: 'modules/register/index.html',
         controller: 'registerctrl'
