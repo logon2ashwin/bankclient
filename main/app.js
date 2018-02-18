@@ -16,7 +16,6 @@ bankapp.run(["$rootScope", "$location",function($rootScope, $location){
     }
     $rootScope.serverpath = 'http://localhost:3002/';
 
-
     $rootScope.go = function (path, value) {
         if(value){
             path = path + "/" + value;
