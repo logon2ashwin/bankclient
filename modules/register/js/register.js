@@ -4,15 +4,19 @@ angular.module('register',[])
         $scope.submitform =  function(formdata){
             console.log(formdata);
             var url = $rootscope.serverpath+ 'account';
-            $http.post(url, formdata, $rootscope.headers)
-            .then(
-                function(response){
-                    if(response.result == 'success')
-                        console.log(response.results)
-                    if(response.results == 'exists')
-                        console.log(response.result)
-                }
-            );
+            $http({
+                method: 'GET',
+                url: url,
+                data: formdata,
+                headers: $rootScope.headers
+            }).then(function(response){
+                    if(response.data.status == 'success'){
+                       $rootscope.go('/login');
+                    }
+                    else{
+                        window.alert('invalid credintials');
+                    }
+                });
 
         }  
 
