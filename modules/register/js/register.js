@@ -3,11 +3,14 @@ angular.module('register',[])
 
         $scope.submitform =  function(formdata){
             console.log(formdata);
-            var url = $rootscope.serverpath;
+            var url = $rootscope.serverpath+ 'account';
             $http.post(url, formdata, $rootscope.serverpath)
             .then(
                 function(response){
-                    
+                    if(response.results == 'success')
+                        console.log(response.results)
+                    else
+                        console.log(response)
                 }
             );
 
