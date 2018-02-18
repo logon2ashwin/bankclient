@@ -2,7 +2,8 @@ var dependencies = [
     // controllers here
     'ngRoute',
     'login',
-    'register'
+    'register',
+    'dashboard'
 ]
 
 
