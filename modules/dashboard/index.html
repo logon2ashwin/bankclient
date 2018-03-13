@@ -26,9 +26,10 @@
         </div>
     </div>
 
-    <div>
+    <div class="col-md-12 col-xs-12 col-sm-12">
         <h3 style="margin-top: 50px;">Tranasactions</h3>
-        <table class="table table-striped">
+       <div ng-show="accountdetails.accountid.length>0">
+         <table class="table table-striped">
             <thead>
                 <tr>
                     <th>Firstname</th>
@@ -53,7 +54,11 @@
                     <td>july@example.com</td>
                 </tr>
             </tbody>
-        </table>
+        </table>     
+       </div>
+       <div ng-show="accountdetails.accountid.length==0">
+           <p class="text-center" style="margin-top: 100px"> No Transactions Found !</p>
+       </div>
     </div>
 
 </div>
