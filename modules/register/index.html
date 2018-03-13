@@ -1,37 +1,40 @@
-<div class="login-container">
-	<div class="container">
-		<div class="Absolute-Center is-Responsive">
-			<div class="login-heading">DSMT Register</div>
-			<div class="inner-container">
-				<form id='registerform'>
-						<label>Username</label>
-						<br>
-						<input type="text" name="username" ng-model="reg.username" placeholder="Enter username" autofocus>
-						<br>
-						<label>Phone-no</label>
-						<br>
-						<input type="text" name="phone" ng-model="reg.phone" placeholder="Enter number">
-						<br>
-						<label>Email</label>
-						<br>
-						<input type="text" name="email" ng-model="reg.email" placeholder="Enter email" autofocus>
-						<br>
-						<label>Password</label>
-						<br>
-						<input type="password" name="password" ng-model="reg.password" placeholder="Enter password">
-						<br>
-						<!-- <label>Confirm Password</label>
-						<br>
-						<input type="password" name="" ng-model="reg." placeholder="Enter password">
-						<br> -->
-						<label>Aadhar-no</label>
-						<br>
-						<input type="password" name="aadharnumber" ng-model="reg.aadharnumber" placeholder="Enter Aadhar-no">
-						<br>
-						<button class="reg-btn" ng-click="submitform(reg)">Submit</button>
-						<br>
-				</form>
+<div class="col-md-4 col-md-offset-4" style="margin-top:3%">
+	<h2>DSMT - REGISTER</h2>
+	<div>
+		<form name="applicantform">
+			<div style="margin: 5px;">
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon3" style="padding-right: 45px;">Name</span>
+					<input type="text" ng-model="applicant.username" class="form-control" id="basic-url" aria-describedby="basic-addon3" required>
+				</div>
 			</div>
-		</div>
+			<div style="margin: 5px;">
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon3" style="padding-right: 42px;">Phone</span>
+					<input type="number" ng-model="applicant.phone" class="form-control" id="basic-url" aria-describedby="basic-addon3" required>
+				</div>
+			</div>
+			<div style="margin: 5px;">
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon3" style="padding-right: 47px;">Email</span>
+					<input type="email" ng-model="applicant.email" class="form-control" id="basic-url" aria-describedby="basic-addon3" required>
+				</div>
+			</div>
+			<div style="margin: 5px;">
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon3">Password</span>
+					<input type="password" ng-model="applicant.password" class="form-control" id="basic-url" aria-describedby="basic-addon3" required>
+				</div>
+			</div>
+			<div style="margin: 5px;">
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon3" style="padding-right: 28px;">Aadhaar</span>
+					<input type="number" ng-model="applicant.aadharnumber" class="form-control" id="basic-url" aria-describedby="basic-addon3" required>
+				</div>
+			</div>
+			<div class="text-center">
+				<button class="btn btn-success" ng-disabled="applicantform.$error.required" ng-click='submitform(applicant)'>Submit</button>
+			</div>
+		</form>
 	</div>
 </div>

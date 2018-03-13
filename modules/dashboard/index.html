@@ -1,9 +1,29 @@
-<div class="container dashboard-container" >
+<div class="container dashboard-container">
 
-    <div>
-        <h3>Welcome user</h3>
-        <h4>Account Number : number</h4>
-        <h4>Account Balance : balance</h4>
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Welcome {{customer.username}}</h3>
+            <h4>Account Number : {{customer._id}}</h4>
+            <h4>Account Balance : {{customer.balance}}</h4>
+        </div>
+        <div class="col-md-6">
+            <div style="margin-top:5%">
+                <div class="col-md-12">
+                    <button class="btn btn-danger pull-right" ng-click="logout()">logout</button>
+                </div>
+                <div class="col-md-12 ">
+                    <div class="pull-right">
+                        <a role='button' ng-click="changemodal('password')">change PIN</a>
+                        <br>
+                        <a role='button' ng-click="changemodal('email')">change Email</a>
+                        <br>
+                        <a role='button' ng-click="changemodal('phone')">change Phone Number</a>
+                        <br>
+                        <a role='button' ng-click="changemodal(touchid)">change Touch ID</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div>
@@ -11,29 +31,29 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                <th>Firstname</th>
-                <th>Lastname</th>
-                <th>Email</th>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                <td>John</td>
-                <td>Doe</td>
-                <td>john@example.com</td>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>john@example.com</td>
                 </tr>
                 <tr>
-                <td>Mary</td>
-                <td>Moe</td>
-                <td>mary@example.com</td>
+                    <td>Mary</td>
+                    <td>Moe</td>
+                    <td>mary@example.com</td>
                 </tr>
                 <tr>
-                <td>July</td>
-                <td>Dooley</td>
-                <td>july@example.com</td>
+                    <td>July</td>
+                    <td>Dooley</td>
+                    <td>july@example.com</td>
                 </tr>
             </tbody>
         </table>
     </div>
-   
+
 </div>

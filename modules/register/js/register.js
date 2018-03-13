@@ -1,17 +1,17 @@
 angular.module('register',[])
-    .controller('registerctrl',['$scope','$routeParams','$rootScope','$http', function($scope,$routeParams,$rootscope,$http){
+    .controller('registerctrl',['$scope','$routeParams','$rootScope','$http', function($scope,$routeParams,$rootScope,$http){
 
         $scope.submitform =  function(formdata){
             console.log(formdata);
-            var url = $rootscope.serverpath+ 'account';
+            var url = $rootScope.serverpath+ 'account';
             $http({
-                method: 'GET',
+                method: 'POST',
                 url: url,
                 data: formdata,
                 headers: $rootScope.headers
             }).then(function(response){
-                    if(response.data.status == 'success'){
-                       $rootscope.go('/login');
+                    if(response.data.result == 'success'){ 
+                       $rootScope.go('/login');
                     }
                     else{
                         window.alert('invalid credintials');
