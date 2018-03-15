@@ -1,5 +1,12 @@
+<style>
+    .optionlist{
+    padding: 1px 0px 0px 20px;
+    margin-top: 1%;
+    background: white;
+    border-radius: 5px;
+    }
+</style>
 <div class="container dashboard-container">
-
     <div class="row">
         <div class="col-md-6">
             <h3>Welcome {{customer.username}}</h3>
@@ -26,7 +33,20 @@
         </div>
     </div>
 
-    <div class="col-md-12 col-xs-12 col-sm-12">
+    <div class="optionlist">
+        <label>DSMT ></label>
+    </div>
+    <div class="optionlist">
+        <label>Benificiary accounts ></label>
+    </div>
+    <div class="optionlist">
+        <label>Transactions ></label>
+    </div>
+    <div class="optionlist">
+        <label>Instant Transfer ></label>
+    </div>
+
+    <!-- <div class="col-md-12 col-xs-12 col-sm-12">
         <h3 style="margin-top: 50px;">Tranasactions</h3>
        <div ng-show="accountdetails.accountid.length>0">
          <table class="table table-striped">
@@ -59,6 +79,6 @@
        <div ng-show="accountdetails.accountid.length==0">
            <p class="text-center" style="margin-top: 100px"> No Transactions Found !</p>
        </div>
-    </div>
+    </div> -->
 
 </div>

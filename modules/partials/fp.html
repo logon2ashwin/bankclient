@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+<style>
+   body {
+  background: #eee;
+  padding: 10%;
+}
+
+#button {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: #fff url("http://scottyzen.com/button/images/finger-print.png") no-repeat center;
+  background-size: contain;
+  display: block;
+  margin: auto;
+  position: relative;
+  box-shadow: 0 1px 10px 0 rgba(1, 1, 1, 0.2), 0 1.5px 4px 0 rgba(1, 1, 1, 0.2);
+}
+#button:hover span {
+  display: block;
+}
+#button span {
+  border-radius: 50%;
+  display: none;
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  top: -10px;
+  left: -10px;
+  background-image: url("http://scottyzen.com/button/images/3.png");
+  background-size: contain;
+  z-index: -1;
+  animation: spinner infinite 5s;
+}
+#button span:nth-child(2) {
+  background-image: url("http://scottyzen.com/button/images/2.png");
+  animation: spinner infinite 6s;
+}
+#button span:nth-child(3) {
+  background-image: url("http://scottyzen.com/button/images/1.png");
+  animation: spinner infinite 4s forwards;
+}
+
+@keyframes spinner {
+  0% {
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  20% {
+    opacity: 1;
+  }
+  33% {
+    transform: rotate(-180deg);
+  }
+  66% {
+    transform: rotate(720deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+</style>
+</head>
+
+<body>
+        <div>
+    <a id="button" href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+    </a>
+</div>
+</body>
+</html>

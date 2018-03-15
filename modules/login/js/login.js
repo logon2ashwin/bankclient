@@ -1,5 +1,5 @@
 angular.module('login',[])
-    .controller('loginctrl',['$scope', '$rootScope','$http', function($scope,$rootScope,$http){
+    .controller('loginctrl',['$scope', '$rootScope','$http','$modal', function($scope,$rootScope,$http,$modal){
 
         $scope.login  = function(user){
 
@@ -22,6 +22,16 @@ angular.module('login',[])
                         window.alert('invalid');
                     }
                 });
+        }
+
+        $scope.fingerprintmodal = function(){
+            var openfingerprintmodal = $modal.open({
+                templateUrl: "./modules/models/fingerprint.html",
+                controller: function ($scope, $rootScope, $modalInstance, $http) {
+                    
+                  console.log('aa');
+                }
+            })
         }
         
     }])
