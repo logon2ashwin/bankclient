@@ -37,51 +37,16 @@
     </div>
 
     <div class="optionlist" role="button">
-        <label ng-click=''>DSMT ></label>
+        <label ng-click='dsmt()'>DSMT ></label>
     </div>
     <div class="optionlist" role="button">
-        <label ng-click=''>Benificiary accounts ></label>
+        <label ng-click="go('/benificiary',userid)">Benificiary accounts ></label>
     </div>
     <div class="optionlist" role="button">
-        <label ng-click=''>Transactions ></label>
+        <label ng-click="go('/transaction',userid)">Transactions ></label>
     </div>
     <div class="optionlist" role="button">
-        <label ng-click=''>Instant Transfer ></label>
+        <label ng-click='instanttransfer()'>Instant Transfer ></label>
     </div>
-
-    <!-- <div class="col-md-12 col-xs-12 col-sm-12">
-        <h3 style="margin-top: 50px;">Tranasactions</h3>
-       <div ng-show="accountdetails.accountid.length>0">
-         <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Firstname</th>
-                    <th>Lastname</th>
-                    <th>Email</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>john@example.com</td>
-                </tr>
-                <tr>
-                    <td>Mary</td>
-                    <td>Moe</td>
-                    <td>mary@example.com</td>
-                </tr>
-                <tr>
-                    <td>July</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
-                </tr>
-            </tbody>
-        </table>     
-       </div>
-       <div ng-show="accountdetails.accountid.length==0">
-           <p class="text-center" style="margin-top: 100px"> No Transactions Found !</p>
-       </div>
-    </div> -->
-
+    
 </div>

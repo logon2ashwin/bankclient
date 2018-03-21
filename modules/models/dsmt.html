@@ -1,0 +1,28 @@
+<div style="min-height: 390px">
+    <div class="modal-header">
+        <h2>DSMT</h2>
+    </div>
+    <div class="modal-body">
+        <div style="font-weight: normal;">
+            <div>
+                <label class="text-capitalize">From Account</label>
+                <label><span class="text-capitalize">{{currentuser.username}}</span>-{{currentuser._id}}</label>
+            </div>
+           <div>
+            <label class="text-capitalize">To Account</label>
+                <select class="form-control" ng-model='touser'>
+                    <option value=" "> </option>
+                    <option value="{{data._id}}" ng-repeat='data in currentuser.benificiery' ><span class="text-capitalize">{{data.username}}</span> ({{data._id}})</option>
+                </select>
+           </div>
+           <div>
+            <label class="text-capitalize">Amount</label>
+            <input class="form-control" type="number" placeholder="Amount" ng-model='amount' autofocus>
+           </div>
+        </div>
+        <div class="modal-footer form-group" style="margin-top: 18%;">
+            <button class="btn btn-success" ng-click="save(currentuser._id,touser,amount)">Confirm</button>
+            <button class="btn btn-danger" ng-click="close()">Cancel</button>
+        </div>
+    </div>
+</div>

@@ -20,6 +20,14 @@ bankapp.config(['$routeProvider', '$httpProvider', '$locationProvider', function
         templateUrl: 'modules/register/index.html',
         controller: 'registerctrl'
     })
+    .when('/benificiary/:id', {
+        templateUrl: 'modules/benificiary/index.html',
+        controller: 'benificiaryctrl'
+    })
+    .when('/transaction/:id', {
+        templateUrl: 'modules/transaction/index.html',
+        controller: 'transactionctrl'
+    })
     $locationProvider.html5Mode({
         enabled:true,
         requireBase: false

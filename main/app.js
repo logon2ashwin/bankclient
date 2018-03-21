@@ -4,7 +4,9 @@ var dependencies = [
     'ngRoute',
     'login',
     'register',
-    'dashboard'
+    'dashboard',
+    'benificiary',
+    'transaction'
 ]
 
 

@@ -1,0 +1,32 @@
+<div class="container dashboard-container">
+    <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-6">
+            <h2>Transactions</h2>
+        </div>
+        <!-- <div class="col-md-6 col-sm-6 col-xs-6"  style="margin-top: 2%;">
+            <button class="btn btn-success pull-right">Add account</button>
+        </div> -->
+    </div>
+    <div style="margin-top: 7%;">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th>Txn ID</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat='data in account.transactions'>
+                    <td>{{data.fromaccountid.username}}</td>
+                    <td>{{data.toaccountid.username}}</td>
+                    <td>{{data.transactionamount}}</td>
+                    <td>{{data.transactiontime | date}}</td>
+                    <td>{{data._id}}</td>
+                </tr>
+            </tbody>
+        </table>    
+    </div>
+</div>

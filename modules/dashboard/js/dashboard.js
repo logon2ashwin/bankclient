@@ -70,6 +70,102 @@ angular.module('dashboard',[])
             })
         }
 
+        $scope.dsmt = function(){
+            var dsmtmodal = $modal.open({
+                templateUrl: "./modules/models/dsmt.html",
+                resolve: {
+                   parameter : function(){
+                       return $scope.customer;
+                   }
+                },
+                controller: function ($scope, $rootScope, $modalInstance, $http, parameter) {
+        
+                    $scope.save = function (from,to,amount) {
+                        console.log(from,to,amount);
+                        var transaction = {
+                            transactionamount : amount,
+                            fromaccountid : from,
+                            toaccountid : to
+                        }
+                        var url = $rootScope.serverpath+ 'transactions';
+                        $http({
+                            method: 'POST',
+                            url: url,
+                            data: transaction,
+                            headers: $rootScope.headers
+                        }).then(function(response){
+                            if(response.status == 200){
+                                $scope.close();
+                            }
+                        });
+                    }
+        
+                    $scope.close = function () {
+                        $modalInstance.close({
+                            status: "cancel",
+                            data: {}
+                        });
+                    }
+                    $scope.initialize = function () {
+                        $scope.currentuser  = parameter;
+                        console.log($scope.currentuser);
+                    }
+                    $scope.initialize();
+                }
+            })
+            dsmtmodal.result.then(function(){
+                $scope.initialize();
+            })
+        }
+
+        $scope.instanttransfer = function(){
+            var dsmtmodal = $modal.open({
+                templateUrl: "./modules/models/instanttransfer.html",
+                resolve: {
+                   parameter : function(){
+                       return $scope.customer;
+                   }
+                },
+                controller: function ($scope, $rootScope, $modalInstance, $http, parameter) {
+        
+                    $scope.save = function (from,to,amount) {
+                        console.log(from,to,amount);
+                        var transaction = {
+                            transactionamount : amount,
+                            fromaccountid : from,
+                            toaccountid : to
+                        }
+                        var url = $rootScope.serverpath+ 'transactions';
+                        $http({
+                            method: 'POST',
+                            url: url,
+                            data: transaction,
+                            headers: $rootScope.headers
+                        }).then(function(response){
+                            if(response.status == 200){
+                                $scope.close();
+                            }
+                        });
+                    }
+        
+                    $scope.close = function () {
+                        $modalInstance.close({
+                            status: "cancel",
+                            data: {}
+                        });
+                    }
+                    $scope.initialize = function () {
+                        $scope.currentuser  = parameter;
+                        console.log($scope.currentuser);
+                    }
+                    $scope.initialize();
+                }
+            })
+            dsmtmodal.result.then(function(){
+                $scope.initialize();
+            })
+        }
+        
         $scope.initialize=function(){
             $scope.userid = $routeParams.id;
             $scope.getaccountdetails($scope.userid)
