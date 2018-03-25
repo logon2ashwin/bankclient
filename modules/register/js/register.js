@@ -1,5 +1,5 @@
 angular.module('register',[])
-    .controller('registerctrl',['$scope','$routeParams','$rootScope','$http', function($scope,$routeParams,$rootScope,$http){
+    .controller('registerctrl',['$scope','$routeParams','$rootScope','$http','Notification', function($scope,$routeParams,$rootScope,$http,Notification){
 
         $scope.submitform =  function(formdata){
             console.log(formdata);
@@ -11,10 +11,11 @@ angular.module('register',[])
                 headers: $rootScope.headers
             }).then(function(response){
                     if(response.data.result == 'success'){ 
+                        Notification.success('Registered Successfully');
                        $rootScope.go('/login');
                     }
                     else{
-                        window.alert('invalid credintials');
+                        Notification.error('invalid credintials');
                     }
                 });
 

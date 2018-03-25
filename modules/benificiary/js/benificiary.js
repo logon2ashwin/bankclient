@@ -1,5 +1,5 @@
 angular.module('benificiary',[])
-    .controller('benificiaryctrl',['$scope', '$rootScope','$http','$routeParams','$modal', function($scope,$rootScope,$http,$routeParams,$modal){
+    .controller('benificiaryctrl',['$scope', '$rootScope','$http','$routeParams','$modal','Notification', function($scope,$rootScope,$http,$routeParams,$modal,Notification){
 
         $scope.getaccountdetails = function(id){
             var url = $rootScope.serverpath+ 'account/accountdetails?id='+id;
@@ -23,6 +23,7 @@ angular.module('benificiary',[])
                 headers: $rootScope.headers,
                 data : $scope.account
             }).then(function(response){
+                Notification.success('Benificiary Added Successfully')
                 $scope.initialize();
             });
         }

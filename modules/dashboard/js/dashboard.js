@@ -1,5 +1,5 @@
 angular.module('dashboard',[])
-    .controller('dashboardctrl',['$scope', '$rootScope','$http','$routeParams','$modal', function($scope,$rootScope,$http,$routeParams,$modal){
+    .controller('dashboardctrl',['$scope', '$rootScope','$http','$routeParams','$modal','Notification', function($scope,$rootScope,$http,$routeParams,$modal,Notification){
 
         $scope.getaccountdetails = function(id){
             var url = $rootScope.serverpath+ 'account/accountdetails?id='+id;
@@ -28,9 +28,7 @@ angular.module('dashboard',[])
                    }
                 },
                 controller: function ($scope, $rootScope, $modalInstance, $http, parameter) {
-        
                     $scope.save = function (value) {
-
                         if($scope.param != 'email') 
                             value = parseInt(value);
                         var options = {
@@ -48,9 +46,10 @@ angular.module('dashboard',[])
                         }).then(function(response){
                                 if(response.status == 200){ 
                                    $scope.close()
+                                   Notification.success('Update successfull');
                                 }
                                 else{
-                                    window.alert('failed to update');
+                                    Notification.error('failed to update');
                                 }
                             });
                     }
@@ -96,6 +95,7 @@ angular.module('dashboard',[])
                         }).then(function(response){
                             if(response.status == 200){
                                 $scope.close();
+                                Notification.success('Transfer Successfull');
                             }
                         });
                     }
@@ -144,6 +144,7 @@ angular.module('dashboard',[])
                         }).then(function(response){
                             if(response.status == 200){
                                 $scope.close();
+                                Notification.success('Transfer Successfull');
                             }
                         });
                     }
