@@ -1,0 +1,22 @@
+{
+  "name": "bankapp",
+  "version": "1.0.0",
+  "description": "banking apllication client",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/logon2ashwin/bankclient.git"
+  },
+  "author": "ashwin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/logon2ashwin/bankclient/issues"
+  },
+  "homepage": "https://github.com/logon2ashwin/bankclient#readme",
+  "dependencies": {
+    "angular-ui-notification": "^0.3.6"
+  }
+}

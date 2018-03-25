@@ -1,5 +1,5 @@
 bankapp.config(['$routeProvider', '$httpProvider', '$locationProvider', function ($routeProvider, $httpProvider, $locationProvider) {
-        
+
     $routeProvider
 
     .when('', {

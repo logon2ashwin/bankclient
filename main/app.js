@@ -1,6 +1,7 @@
 var dependencies = [
     // controllers here
     'ui.bootstrap',
+    'ui-notification',
     'ngRoute',
     'login',
     'register',
